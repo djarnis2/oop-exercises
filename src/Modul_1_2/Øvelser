@@ -1,0 +1,322 @@
+7 Booleans
+7.1 Definition
+Hvad er en boolean?
+<Et ekspression der kan evalueres til enten sandt eller falsk>
+7.2 Oprettelse
+Hvilke operatorer kan man bruge til at få et expression til at evaluere til en
+boolsk værdi?
+<==,!=,&&,||,^>
+
+7.3 Købsbeslutning
+Betragt følgede kodeudtræk:
+double price = 599.95;
+double budget = 1000.0;
+boolean requiredReading = true;
+boolean shouldBuy = price < budget && requiredReading;
+Forklar sidste linje og fokuser på:
+• I hvilken rækkefølge bliver hvad udregnet?
+• Hvilke værdier (navngivne eller ej) udføres de enkelte operatorer på?
+• Hvilke typer har disse værdier?
+• Hvad repræsenterer variablen shouldBuy?
+7.4 Terninger
+Skriv et program, hvori
+1. Værdien af et terningeslag er gemt i en variabel ved navn dice.
+• Hvilken type giver det mening at erklære variablen som?
+• Vælg selv en specifik værdi.
+2. Opret en boolsk variabel og tildel den en værdi der repræsenterer hvorvidt
+værdien fra variablen dice er lige og større end 3.
+3. Udskriv den værdien af denne boolske variabel.
+8 Branches
+8.1 Epoch
+Skriv et program, hvori
+1. I tager udgangspunkt i opgaven fra afsnit 6.4.
+2. I erklærer en variabel hvis værdi repræsenterer et antal sekunder siden
+nytår.
+3. På baggrund af værdien af denne variabel udregner I hvilken måned og
+hvilken dag der er tale om (I kan gå ud fra at alle måneder er 30 dage
+lange).
+4. Udskriv “Det er jul!” hvis det er tilfældet (det er jul den 24. December).
+8.2 Epoch Diff
+Udvid opgaven fra afsnit 8.1 til – hvis det ikke er jul – at udskrive hvor lang tid
+man skal vente på at det bliver jul.
+8.3 Juleudsalg
+Skriv et program, hvori
+1. En variabel oprettes (erklæres) og initialiseres til værdien 21816000. Dette
+tal repræsenterer et antal sekunder siden nytår (alle måneder antages at
+være 30 dage lange).
+2. En anden variabel indeholder en pris på 599,95 dkr.
+3. Der skal gives et 30% tilskud hvis det er Jul. Find selv på en fornuftig
+definition af hvornår det er Jul.
+4. Udregn den gældende pris (eventuelt tilskud medregnet) og gem denne i
+en variabel.
+5. Udskriv denne variabel.
+6. Sørg for at teste den logik I har skrevet ved at prøve at tildele den første
+variable forskellige andre værdier. Hvilke værdier vil være fornuftige at
+teste?
+
+8.4 Længden af en Måned
+Skriv et program, hvori
+1. En måneds nummer gemmes i en variabel. Denne variabel skal fungere
+som input til jeres program.
+• Hvilket navn ville være passende for denne variabel?
+• Hvilken type ville være passende for denne variabel?
+2. Skriv noget kode der bestemer hvor mange dage der er i den måned som udpeges af denne variabels konkrete værdi (vi antager at det ikke er skudår),
+og udskriv dette tal.
+3. Skriv dette tal ud på skærmen.
+4. Overbevis jer selv om at jeres kode er korrekt.
+
+8.5 Ferie
+Undervisningskalenderen fortæller os at der (blandt andet) er følgende ferier:
+• Efterårsferie Oktober
+• Juleferie December
+• Påskeferie April
+• Sommerferie Juli + August
+Skriv et program, hvori
+1. Et månedsnummer gives via en variabel.
+2. Afhængigt af indholdet af denne variabel udskrives en feries navn (hvis
+der er ferie i måneden) eller “Hårdt arbejde” (hvis der ikke er).
+
+9 Loops
+9.1 Celcius til Fahrenheit
+Skriv et program, hvori
+• Der udskrives en tabel af matchende Celcius og Fahrenheit værdier.
+– Formel: TF = 32 + 9/5 TC
+• Der skal være ét sæt matchende værdier per linje.
+• Listen skal starte med -5◦C og slutte ved 40◦C.
+• Listen skal have én linje for hver 0,5◦C.
+9.2 Celcius til Fahrenheit i Omvendt Rækkefølge
+Omskriv programmet fra opgave 9.1 til at vende rækkefølgen om sådan at første
+linje udskriver 40◦C og sidste -5◦C.
+9.3 Celcius til Fahrenheit Alternativer
+Lav to andre udgaver af programmet fra opgave 9.1, hvori loopet omskrives til
+hver af de to resterende typer af loops.
+
+9.4 Areal af Cirkler
+Skriv et program der udregner og udskriver arealet (π · r
+2
+) af tre cirkler med
+radius på hhv. 1, 3 og 5.
+9.5 Primtal
+Skriv et program, der udregner alle primtal under 1.000.000, og udskriver det
+største.
+Hints (se bort fra følgende hints hvis I er friske på en udfordring):
+• Benyt en del-og-hersk strategi, hvor I ser opgaven som tre delopgaver:
+– Gennemløb alle positive heltal under 1.000.000. Har vi ikke en konstruktion der kan det?
+– Bestem om et givent positivt heltal er et primtal.
+– Udprint et heltal (hvis det altså er et primtal).
+• Et positivt heltal er et primtal hvis, og kun hvis, der ikke er andre heltal
+end 1 der går op i det.
+• For at bestemme om et givent positivt heltal er et primtal kan I endnu
+engang benytte del-og-hersk:
+1. Opret en variable af typen boolean ved navn is_prime som er True.
+2. Gennemløb alle heltal fra og med 2 til (men ikke med) 1.000.000.
+3. For hvert af disse tal skal I checke om dette tal går op i det potentielle
+primtal. Gør de det, så sættes is_prime til False. Men hvordan
+undersøger man om ét tal går op i et andet?
+– Man prøver det da!
+– Hvis en heltalsdivision går op er det ikke nogen rest og en modulo
+operation (via operatoren %) giver nul.
+– Alternativt kan man udnytte at en heltalsdivision kommer til
+at foretage en afrunding hvis divisionen ikke går op sådan at
+(a/b) · b ̸= a.
+4. Herefter repræsenterer is_prime en sandhedsværdi for hvovidt et tal
+er et primtal.
+
+
+
+
+
+
+
+Part II
+Vejledende Løsninger
+10 Grafer
+10.1 Termer
+Denne opgave har ikke en referencebesvarelse.
+10.2 Træstrukturer
+• a har en ring og er da ikke et træ.
+• b har n = 9 knuder og netop n − 1 unikke kanter. Dermed er det et træ.
+• c har n = 6 knuder og netop n − 1 unikke kanter. Dermed er det et træ.
+• d har n = 7 knuder og netop n − 1 unikke kanter. Dermed er det et træ.
+• e har n = 9 knuder og 9 unikke kanter (altså ̸= n − 1). Dermed er det
+ikke et træ.
+• f består af to delgrafer, der hver er et træ. Til sammen kaldes det for en
+skov.
+10.3 Stamtræ
+En del af stamtræet af the Simpsons kunne se således ud:
+Abe
+Simpson
+Mona
+Simpson
+Clancy
+Bouver
+Jacqueline
+Bouver
+Herb
+Simpson
+Homer
+Simpson
+Marge
+Bouver
+Patty
+Bouver
+Selma
+Bouver
+Bart
+Simpson
+Lisa
+Simpson
+Maggie
+Simpson
+Ling
+Bouver
+I ovenstående eksempel er følgende grafrelaterede udtryk i brug:
+• En knude kan være en person
+• En kant kan repræsentere en forældre-barn relation.
+11 Filsystemet
+12 Versionskontrol
+12.1 Commit Log
+Denne opgave har ikke en referencebesvarelse.
+12.2 Ændinger
+Denne opgave har ikke en referencebesvarelse.
+12.3 Konflikter
+Denne opgave har ikke en referencebesvarelse.
+13 Typer
+13.1 Hello, World
+public class Hello
+{
+public static void main (String[] args) {
+System.out.println("Hello, World");
+}
+}
+13.2 Måned
+Der er 12 forskellige måneder, hvor man kunne sige at 1 repræsenterer Januar,
+2 Februar . . . Det er ikke klart hvad 1.1 bør betyde, så det giver mening at
+begrænse sig til heltal. Derfor vil vi naturligt bruge en heltallig type, og da vi
+vi kun har 12 måneder er int mere pladsøkonomisk end long.
+13.3 Heltallige Grænser
+I Java er der 4 (primitive) heltalstyper: byte, short, int og long.
+En byte kan repræsenterer alle heltal fra og md -128 til og med 127. For at finde
+ud af hvad der sker når vi overskrider det største heltal der kan representeres,
+skriver vi følgende program:
+public class IntegerBoundary
+{
+public static void main (String[] args) {
+byte b = 127;
+System.out.println(b);
+b += 1;
+System.out.println(b);
+}
+}
+Kører vi dette program får vi:
+127
+-128
+Vi har altså, at 127 + 1 giver os −128. Eller med andre ord; når vi lægger én til
+det størst mulige tal så får vi det mindst mulige tal. Dette er ikke et tilfælde,
+og gør sig generelt gældende for alle de 4 ovenstående typer.
+14 Expressions
+14.1 Tildeling
+Du kan jo prøve:
+public class ExprTest
+{
+public static void main (String[] args) {
+int var1;
+int var2 = var1 = 42;
+System.out.println(var1);
+System.out.println(var2);
+}
+}
+14.2 Expression vs Statement
+Expressions og statements er forskellige syntaktiske konstruktioner. Det betyder
+at Javas oversætter (nydansk: compiler) forventer expressions nogen steder og
+statements andre steder. Overholder ens program ikke disse syntaktiske regler
+vil oversætteren give en såkaldt syntaksfejl og opgive.
+Den vigtigeste forskel er at et expression – i modsætning til statements – kan
+evalueres til en værdi. Hovedstrukturen af et stykke logik er udgøres derfor at
+statements og expressions bruges til at udregne mellemresultater.
+15 Variable
+15.1 Areal af Cirkler
+public class CircleArea
+{
+public static void main (String[] args) {
+final double pi = 3.14;
+double r;
+r = 1;
+System.out.println("r="+r+" -> area="+(pi*r*r));
+r = 3;
+System.out.println("r="+r+" -> area="+(pi*r*r));
+r = 5;
+System.out.println("r="+r+" -> area="+(pi*r*r));
+}
+}
+15.2 Inkrementering af Måned
+Observation: Da vi er i den niende måned gav jeg 9 som initiel værdi. Denne
+værdi ændrede sig ikke da jeg lagde en halv til, og heller ikke da jeg gjorde dette
+igen.
+Forklaring: Ved addition af forskellige typer foretager Java en implicit konvertering til den første type. Denne type er heltallige og værdien 0.5 bliver derfor
+rundet ned til 0. Derfor lægges der i praksis nul til to gange.
+15.3 Værdi vs Variabel
+En variabel er en symbolsk reference (eller indirektion) til en værdi. Vi siger at
+variablen peger på værdien. Vi kan ændre på hvilken værdi en variabel peger på
+ved at tildele den en ny værdi. I praksis ligger værdien et sted i hukommelsen
+og variablen indeholder adressen på dette sted.
+Dette er en abstraktion der gør det muligt at skrive kode der er uafhængig af
+specifikke værdier.
+15.4 Daglige Differencer
+public class DailyDiffs
+{
+public static void main (String[] args) {
+final double day1 = 21.5;
+final double day2 = 23.7;
+final double day3 = 19.6;
+final double day4 = 22.5;
+final double day5 = 25.3;
+final double day6 = 21.7;
+final double day7 = 18.9;
+System.out.println(day2-day1);
+System.out.println(day3-day2);
+System.out.println(day4-day3);
+System.out.println(day5-day4);
+System.out.println(day6-day5);
+System.out.println(day7-day6);
+}
+}
+15.5 Gennemsnitlig Alder
+Når programmet udføres printes følgende ud:
+Average livespan of a male computer scientist: 76.666664
+Average livespan of a female computer scientist: 68.666664
+Average livespan of a computer scientist: 72.666664
+Males lives this much longer than female: 8.0
+Programmet har en main metode der består af (i) 6 variabel erklæringer med
+initielle værdier, (ii) en række variabel erklæringer der initialiseres til at holde
+resultatet af nogle udregninger, og til sidst udskrives resultaterne.
+I den første del erklæres 6 int variabler. Hver af disse er navngivet efter en
+kendt datalog og initialiseres til hvor gamle de blev. For hver af disse er der
+et udkommenteret link til deres side på Wikipedia. Dernæst kommer der fire
+udregninger. Hver udregning gemmes i en float variabel.
+I den første udregning lægges samtlige mandlige variable sammen. Resultatet af
+denne opsummering castes til en float hvorefter det divideres med 3 (antallet)
+og gemmes i male_avg variablen. Tilsvarende udregnes og gemmes gennemsnittet for kvinder i female_avg. I den tredje udregning lægges disse to gennemsnit
+sammen og resulatet af dette divideres med 2 og gemmes i variablen avg. Dette
+er korrekt eftersom der er lige mange mænd og kvinder, og da male_avg er af
+typen float er det ikke nødvendigt at caste for at undgår afrundingsfejl i divisionen. I den sidste udregning trækkes female_avg fra male_avg og resultatet
+gemmes i variablen diff.
+Til sidst printes hver af disse 4 udregnede variable ud på skærmen. For hver
+af dem bruges to statements. I det første statement udskrives en streng der
+beskriver hvad værdien betyder uden linjebrud. I det andet og sidste statement
+udskrives værdien med linjebrud.
+15.6 Printf
+Den fulde test kode:
+public class Formatting
+{
+public static void main (String[] args) {
+int i = 42;
+long l = 56;
+float f = 3.14159F;
+double d = 3.14159*10;
+System.out.printf("i=%d l=%,4d f=%f d=%6.2f", i, l, f, d);
+System.out.println("");
+}
+}
+Vi kan bruge System.out.printf til at padde værdier med mellemrum og
+bestemme hvor mange decimaler vi ønsker efter kommaet. Herved kan vi formatere udskrifter.

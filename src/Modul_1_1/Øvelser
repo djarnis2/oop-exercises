@@ -1,0 +1,136 @@
+4 Typer
+
+4.1 Hello, World
+Skriv et program, der udskriver teksten “Hello, World”, få det oversat og udfør
+det.
+
+4.2 Temperatur
+Hvilke datatyper er velegnede til at representere en temperatur?
+
+4.3 Måned
+Hvilke typer er velegnede til at repræsentere en måned?
+
+4.4 Heltallige Grænser
+1. Hvilke heltallige datatyper kan man benytte sig af i Java?
+2. Vælg én af dem.
+3. Skriv et program der eksperimentelt afslører hvad der sker når man overskrider den størst mulige værdi.
+4. Beskriv hvad det er I observerer?
+
+4.5 Casting
+Når vi godt vil konvertere mellem int værdier og long værdier skal der udføres
+et cast. Men, hvornår er det at dette cast skal gøres eksplicit, og hvornår må
+det være implicit?
+• Hvorved adskilder int og long sig?
+• Prøv at skrive et program der (i) erklærer i som en int variabel, (ii)
+tildeler den en værdi, (iii) erklærer l som en long variabel, (iv) tildeler
+værdien af i til l, og (v) slutteligt tildeler værdien af l til i.
+• Eksperimentér med hvor det er nødvendigt at have eksplicitte casts.
+• Gør nu det samme med en float variabel f og en double variabel d.
+• Eksperimentér igen med hvor det er nødvendigt at have eksplicitte casts.
+• Afhænger resultatet af disse eksperimenter af den værdi som I initielt
+tildeler den første variabel?
+
+5 Expressions
+5.1 Definition
+Hvad er et expression?
+5.2 Tildeling
+Er en tildeling (af en værdi til en variabel) et expression? Hvordan tester I en
+hypotese om dette?
+5.3 Expression vs Statement
+Hvad er forskellen på et expression og et statement?
+
+6 Variable
+6.1 Areal af Modul_1_1.Cirkler
+Skriv et program der udregner og udskriver arealet (π · r
+2
+) af tre cirkler med
+radius på hhv. 1, 3 og 5.
+
+6.2 Sum af Areal af Modul_1_1.Cirkler
+Skriv et program der udregner og udskriver omkredsen (2 · π · r) af tre cirkler
+med radius på hhv. 1, 3 og 5, og afslutter med at udskriven summen af disse.
+
+6.3 Celcius til Fahrenheit
+Skriv et program, hvori
+1. En temperatur angives i Celcius via en variabel.
+2. Denne temperatur konverteres til Fahrenheit og gemmes i en anden variabel.
+• Formel: TF = 32 + 9
+3. Konverteringen udskrives på en passende måde.
+
+6.4 Epoch
+Skriv et program hvori
+1. Et antal sekunder siden et bestemt tidspunkt (fx 1. Januar 1970) gemmes
+i en variabel.
+2. Konvertér dette tal til et helt antal år (lad os antage at der er 365 dage
+på et år) og et antal hele dage indenfor det sidste år. Lægges disse to tal
+sammen skal resultatet altså være indenfor 24 timer af udgangspunktet.
+3. Udskriv disse to tal.
+Verificér at programmet virker.
+
+6.5 Inkrementering af Måned
+Skriv et program, hvori
+1. En heltallig variabel bruges til at repræsentere en måned.
+2. Denne variabel tildeles en værdi (du vælger selv).
+3. Udskriv variablens værdi.
+4. Forøg værdien af denne variabel med en halv.
+5. Udskriv variablens værdi.
+6. Forøg værdien af denne variabel med en halv.
+7. Udskriv variablens værdi.
+Få dette program til at oversætte, kør det og beskriv hvad du observerer.
+Forklar hvorfor programmet opfører sig sådan.
+
+6.6 Værdi vs Variabel
+Hvad er forholdet mellem en værdi og en variabel?
+
+6.7 Daglige Differencer
+Skriv et program, der givet 7 dagstemperaturer udregner og udskriver
+temperaturdifferencen mellem alle to på hinanden følgende dage
+(dvs. Tirsdag-Mandag, Onsdag-Tirsdag . . . Søndag-Lørdag).
+Dagstemperaturerne kunne være:
+• Mandag: 21.5
+• Tirsdag: 23.7
+• Onsdag: 19.6
+• Torsdag: 22.5
+• Fredag: 25.3
+• Lørdag: 21.7
+• Søndag: 18.9
+
+6.8 Gennemsnitlig Alder
+Betragt følgende program:
+public class AvgAge
+{
+public static void main (String[] args) {
+int ada_lovelace = 36; // https://en.wikipedia.org/wiki/Ada_Lovelace
+int dennis_ritchie = 70; // https://en.wikipedia.org/wiki/Dennis_Ritchie
+int grace_hopper = 85; // https://en.wikipedia.org/wiki/Grace_Hopper
+int hedy_lamarr = 85; // https://en.wikipedia.org/wiki/Hedy_Lamarr
+11
+int edsger_dijkstra = 72; // https://en.wikipedia.org/wiki/Edsger_W._Dijkstra
+int douglas_engelbart = 88; // https://en.wikipedia.org/wiki/Douglas_Engelbart
+float male_avg = (float)(dennis_ritchie+edsger_dijkstra+douglas_engelbart)/3;
+float female_avg = (float)(ada_lovelace+grace_hopper+hedy_lamarr)/3;
+float avg = (male_avg+female_avg)/2;
+float diff = male_avg-female_avg;
+System.out.print("Average livespan of a male computer scientist: ");
+System.out.println(male_avg);
+System.out.print("Average livespan of a female computer scientist: ");
+System.out.println(female_avg);
+System.out.print("Average livespan of a computer scientist: ");
+System.out.println(avg);
+System.out.print("Males lives this much longer than female: ");
+System.out.println(diff);
+}
+}
+Udfør programmet. Hvad sker der?
+Skriv nu en tekst på dansk hvor I ved hjælp af fagtermer forklarer hvad der sker.
+Sørg for at denne tekst er grundig nok til at en programmør kan genkonstruere
+ovenstående kode.
+
+6.9 Printf
+Undersøg hvordan følgende stykke kode fungerer ved at modificere indholdet af
+strengen i den sidste linje:
+int i = 42;
+long l = 56;
+float f = 3.14159;
+double d = 3.14159*10;
+System.out.printf("i=%d l=%,4d f=%f d=%6.2f", i, l, f, d);
