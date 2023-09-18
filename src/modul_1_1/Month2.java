@@ -1,4 +1,4 @@
-package Modul_1_1;
+package modul_1_1;
 
 /*
 6.5 Inkrementering af Måned

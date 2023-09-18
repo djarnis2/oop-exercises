@@ -1,0 +1,130 @@
+10 Arrays
+
+10.1 Definition
+Hvad er et array?
+
+< Et array er en samling af objekter af samme data-type og af et fast antal som bliver defineret ved intitialiseringen.>
+
+10.2 Anvendelse
+Hvornår giver det mening at bruge arrays?
+
+<Når man skal bruge en række objekter af samme datatype og ved ca hvor mange man skal bruge.>
+
+10.3 Type af Indhold vs Type af Array
+Hvad er sammenhængen mellem typen af et array og de data som det kan
+indeholde?
+
+<De skal være samme type>
+
+10.4 Størst i Array
+Skriv et program, der finder det største tal i et array af typen int[], og udskriver
+indeks for dette tal. Find selv på noget passende indhold til dette array.
+
+<Tal.class>
+
+10.5 Erklæring af Størrelse
+Hvilket syntaktiske element bruges – ved oprettelse af et array – til at erklære
+hvor mange (data) elementer der skal være plads til?
+
+<Man bruger ordet "new">
+
+10.6 Multiplikationstabel
+Skriv et program, hvori
+1. En heltallig variabel ved navn size initialiseres til en værdi under 30. I
+vælger selv den konkrete værdi.
+2. Der oprettes et array med en længde som modsvarer værdien af size.
+3. Arrayet fyldes op med 3-tabellen. Altså, elementet med indeks n skal have
+værdien 3 · n.
+4. Et (eller flere) velvalgt(e) element(er) udskrives for at verificere korrektheden.
+
+<Tal2.java>
+
+10.7 Sudoku Plade
+Hvordan ville du repræsentere en sudoku12 plade i Java?
+
+<Ved hjælp af en 2d array af heltal, men man behøver ikke bruge større datatype end byte:
+byte        Heltal:     -128 til 127                8 bit
+byte[][] sudoku = new byte [9][9];>
+
+Hvordan hænger denne datastruktur sammen i hukommelsen?
+
+<Det første array er 9 memory lokationer, i hver af disse ni lokationer er der afsat ni byte til data.>
+
+10.8 Areal af Cirkler
+Skriv et program der udregner og udskriver arealet (π · r * r) af tre forskellige
+cirkler med radius 1, 3, og 5.
+
+10.9 Daglige Differencer
+Skriv et program, der givet 7 dagstemperaturer udregner og udskriver temperaturdifferencen mellem alle to på hinanden følgende dage (dvs. Tirsdag-Mandag,
+Onsdag-Tirsdag . . . Søndag-Lørdag).
+Dagstemperaturerne kunne være:
+• Mandag: 21.5
+• Tirsdag: 23.7
+• Onsdag: 19.6
+• Torsdag: 22.5
+• Fredag: 25.3
+• Lørdag: 21.7
+• Søndag: 18.9
+
+10.10 Længden af en Måned
+Skriv et program, der givet en måneds nummer udskriver antallet af dage i
+denne måned (se bort fra skudår).
+
+10.11 Primtal
+Skriv et program der udregner alle primtal under 1.000.000 og udskriver det
+største.
+Gør dette ved at implementere Eratosthenes Si13
+Kvadratroden af i udregnes som java.lang.Math.sqrt(i).
+13https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+
+10.12 Kalender
+Skriv et program, hvori
+1. En variabel initialiseres til at være et array der indeholder antallet af dage
+i hver af de 12 måneder i et normalt år. Det første element vil da indeholde
+antallet af dage i Januar.
+2. En anden variabel initialiseres til at være et array der indeholder antallet
+af dage i hver af de 12 måneder i et skudår.
+3. Gennemløb årene 2000 til 2020:
+(a) Brug en ny variabel af samme type som de to forregående til at holde
+styr på hvilket array der er korrekt for det aktuelle år.
+• Hvor meget data bliver der kopieret her?
+• Hint: Vi kan i denne opgave tillade os at forsimple skudårsreglerne til at det er skudår hvis 4 går op i årstallet.
+(b) For hvert år udskrives indholdet af det array som den sidste variabel
+peger på.
+
+
+10.13 Kalender Prettyprinting
+Lav et program, hvori
+1. Der oprettes en datastruktur til at holde en kalender der spænder ét år.
+Man skal kunne indeksere ind med en dato (måned + dag) og få en dag
+(fx Mandag).
+• Hvad er typen af denne datastruktur?
+• Hvordan initialiseres en variabel af denne type?
+• Hvordan kan man sørge for at indholdet er korrekt?
+2. Udskriv denne datastruktur på en “pæn” måde.
+
+10.14 Sudoku Checker
+Skriv et program, hvori
+• En variabel initialiseres til at indeholde en udfyldt sudokuplade.
+– Hvordan skal vi repræsentere et felt der ikke er udfyldt?
+– Hvad skal typen af denne variabel være?
+– Hvordan erklæres den?
+– Hvordan kan vi initialisere den?
+– Hint: Find selv en udfyldt (aka: løst) sudoku plade online.
+• Skriv kode der vurderer om pladen representerer en korrekt løsning.
+– Hint 1: Dette er tilfældet når alle følgende ting er sande:
+∗ Samtlige felter er udfyldte.
+∗ Der er ingen række med to ens felter. Alternativt: Alle tallene
+1-9 eksisterer i samtlige rækker.
+∗ Der er ingen søjle med to ens felter. Alternativt: Alle tallene 1-9
+eksisterer i samtlige søjler.
+∗ Der er ingen 3x3 gruppe med to ens felter. Alternativt: Alle
+tallene 1-9 eksisterer i samtlige 3x3 grupper.
+Hint 2: Hvis man skal undersøge om tallene 1-9 eksisterer kunne
+man jo oprette et boolean[9] array der repræsenterer om tallene er
+fundet, initialisere dette til kun at indeholde false værdier, gennemløbe alle tal som er i et felt og sætte indekset med dette nummer
+(minus 1) til true. Er der nogen false værdier tilbage er der et
+manglende tal og sudokuen er ikke korrekt løst.
+• Udskriv resultatet af denne vurdering.
+– Giver programmet også det korrekte resultat hvis man giver det en
+forkert udfyldt sudoku plade?

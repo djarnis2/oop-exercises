@@ -1,4 +1,4 @@
-package Modul_1_2;
+package modul_1_2;
 /*
 9 Loops
 9.1 Celcius til Fahrenheit

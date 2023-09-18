@@ -1,4 +1,4 @@
-package Modul_1_1;
+package modul_1_1;
 
 /*Skriv et program der udregner og udskriver arealet (π · r
         2

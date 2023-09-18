@@ -1,4 +1,4 @@
-package Modul_1_2;
+package modul_1_2;
 /*
 8.4 Længden af en Måned
 Skriv et program, hvori

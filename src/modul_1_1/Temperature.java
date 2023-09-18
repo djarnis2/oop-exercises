@@ -1,4 +1,4 @@
-package Modul_1_1;
+package modul_1_1;
 
 //4.2 Temperatur
 //Hvilke datatyper er velegnede til at representere en temperatur?

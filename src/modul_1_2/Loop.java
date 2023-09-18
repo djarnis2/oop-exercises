@@ -1,4 +1,4 @@
-package Modul_1_2;
+package modul_1_2;
 /*
 part one with int rounds off to lower int, therefore only 5 loops
 part two with doubles repeats as long as it can record a number in the

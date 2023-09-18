@@ -1,4 +1,4 @@
-package Modul_1_1;
+package modul_1_1;
 
 /*
 Undersøg hvordan følgende stykke kode fungerer ved at modificere indholdet af

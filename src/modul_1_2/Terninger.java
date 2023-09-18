@@ -1,4 +1,4 @@
-package Modul_1_2;
+package modul_1_2;
 /*
 7.4 Terninger
 Skriv et program, hvori

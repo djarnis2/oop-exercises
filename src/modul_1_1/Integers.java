@@ -1,4 +1,4 @@
-package Modul_1_1;
+package modul_1_1;
 
 /*4.4 Heltallige Grænser
 1. Hvilke heltallige datatyper kan man benytte sig af i Java?

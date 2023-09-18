@@ -40,13 +40,13 @@ hypotese om dette?
 Hvad er forskellen på et expression og et statement?
 
 6 Variable
-6.1 Areal af Modul_1_1.Cirkler
+6.1 Areal af modul_1_1.Cirkler
 Skriv et program der udregner og udskriver arealet (π · r
 2
 ) af tre cirkler med
 radius på hhv. 1, 3 og 5.
 
-6.2 Sum af Areal af Modul_1_1.Cirkler
+6.2 Sum af Areal af modul_1_1.Cirkler
 Skriv et program der udregner og udskriver omkredsen (2 · π · r) af tre cirkler
 med radius på hhv. 1, 3 og 5, og afslutter med at udskriven summen af disse.
 

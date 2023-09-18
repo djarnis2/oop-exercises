@@ -1,4 +1,4 @@
-package Modul_1_2;
+package modul_1_2;
 /*
 Betragt følgede kodeudtræk:
 double price = 599.95;

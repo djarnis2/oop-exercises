@@ -1,4 +1,4 @@
-package Modul_1_1;
+package modul_1_1;
 /*
 6.8 Gennemsnitlig Alder
 Betragt følgende program:

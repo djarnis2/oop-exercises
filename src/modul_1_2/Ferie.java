@@ -1,4 +1,4 @@
-package Modul_1_2;
+package modul_1_2;
 /*
 8.5 Ferie
 Undervisningskalenderen fortæller os at der (blandt andet) er følgende ferier:

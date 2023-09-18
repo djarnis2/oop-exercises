@@ -1,4 +1,4 @@
-package Modul_1_2;
+package modul_1_2;
 
 /*
 This loop takes a number and multiplies with it, to a max of the number squared.
