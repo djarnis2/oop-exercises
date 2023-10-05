@@ -1,0 +1,69 @@
+11 Metoder
+11.1 Anvendelse
+Hvad bruges en metode til?
+<statements der ellers skulle gentages>
+
+11.2 Mangel på Returværdi
+Hvordan erklærer man at en metode ikke returnerer en værdi?
+<void>
+
+11.3 Sudoku Prettyprinter
+Følgende datastruktur repræsenterer en udfyldt sudoku plade:
+int[][] puzzle = {
+{7, 3, 6, 4, 5, 2, 9, 8, 1},
+{1, 9, 8, 6, 3, 7, 4, 5, 2},
+{4, 2, 5, 9, 8, 1, 3, 7, 6},
+{3, 6, 4, 5, 2, 8, 1, 9, 7},
+{9, 5, 2, 7, 1, 4, 6, 3, 8},
+{8, 1, 7, 3, 9, 6, 2, 4, 5},
+{2, 8, 9, 1, 7, 3, 5, 6, 4},
+{6, 7, 3, 2, 4, 5, 8, 1, 9},
+{5, 4, 1, 8, 6, 9, 7, 2, 3},
+};
+Skriv et program, hvori
+1. Ovenstående datastruktur er defineret.
+2. En metode er defineret der som parameter tager en sådan struktur og
+skriver den ud på skærmen.
+• Hvilken prototype (i.e., returværdi og signatur) skal denne metode
+have?
+
+<returværdien har jeg sat til void, signaturen til void int[][]
+
+• Skal man udprinte en række af gangen eller en søjle af gangen?
+• Hint: Metoden System.out.print gør det samme som System.out.println
+men undlader at bryde linjen.
+3. En main metode kalder denne metode.
+11.4 Sum
+Skriv en metode, der lægger to heltal sammen. Skriv derudover en main metode
+der viser hvordan denne metode skal bruges.
+11.5 Egen Kvadratrod
+Skriv et program, hvori
+1. En metode udregner kvadratroden af en double med fx 7 decimale cifre.
+• Hint: Prøv jer frem for hvert ciffer, og brug et loop til at iterere
+over cifrene 1000000000 til 0.000000001. Når I har fundet den bedste
+værdi (der, når det sættes i anden, giver en værdi der ikke er større
+end resultatet) for dette ciffer, fortsætter I til det næste.
+2. Der er en main metode som demonstrerer denne metode.
+11.6 Matematisk Ækvivalent
+Hvilken matematiske konstruktion kan repræsenteres rigtigt godt med en metode,
+og hvorved adskilder de to sig fra hinanden?
+11.7 Diskriminanter og Rødder
+Skriv et program, hvori
+1. En metode kan udregne en diskriminant14 ud fra parametrene a, b og c.
+2. En metode tager parametrene a, b og c fra et andengradspolynomie15, og
+returnerer et array af rødder.
+• Hint: I kan bruge java.lang.Math.sqrt(9.0) i til at udregne √9.
+
+3. Der er en main metode, som kalder den sidste metode og udskriver resultatet.
+14https://en.wikipedia.org/wiki/Discriminant
+15https://en.wikipedia.org/wiki/Quadratic_function
+23
+11.8 Fakultet
+Skriv et program, hvori
+1. En metode udregner fakultet16 (e.g., fac(4) = 4 · 3 · 2 · 1) uden brug af et
+loop.
+• Hint: Dette kan gøres ved hjælp af rekursion.
+2. En main metode som kalder denne metode og udskriver resultatet.
+11.9 Cirkler i Tal
+Skriv et program der udregner og udskriver både arealet (π · r2) og omkredsen
+(2 · π · r) af tre cirkler med radius på hhv. 1, 3 og 5.

@@ -1,0 +1,164 @@
+/*
+13 Grundlæggende Programmering
+13.1 Sudoku Løser
+Lav et program der løser en Sudoku.
+Bemærk: Dette er en svær opgave, som kræver at der tænkes kreativt.
+13.2 Game of Life
+Lav en implementering af John Conway’s Game of Life17.
+Bemærk: Dette er en svær opgave, som kræver at der tænkes kreativt.
+13.3 8 Dronninge Problemet
+Lav en implementering af 8-dronninge-problemet18.
+Opgaven er at lave et program der finder én (eller alternativt alle) opstillinger
+hvor 8 dronninge brikker er placeres på et skakbræt med 8 tern på hver led,
+uden at nogen dronning kan "slå" nogen anden dronning. En dronning kan slå
+alle brikker på samme række, søjle eller diagonal.
+Bemærk: Dette er en svær opgave.
+Hint: Prøv at gennemløbe alle konfigurationer af dronningepositioner og check
+hvilke der er gyldige løsninger.
+Bonus: 8-dronninge-problemet kan generaliseres til et n-dronninge-problem.
+
+17https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+18https://en.wikipedia.org/wiki/Eight_queens_puzzle
+
+
+14 Objekter
+14.1 Kunder
+Lav et program efter følgende opskrift:
+1. Opret et nyt projekt med en klasse indeholdende en main-metode.
+2. Opret, i dette projekt, en ny klasse ved navn Customer.
+3. I klassen Customer tilføjes følgende attributter:
+• En attribut ved navn name af typen String.
+• En attribut ved navn id af typen int.
+• En attribut ved navn balance af typen double.
+4. I klassen Customer tilføjes to Constructors:
+Én Constructor der tager et navn og et id som argument og bruger
+disse værdier til at sætte værdierne af de tilsvarende attributter, og
+som derudover sætter balancen til 0.
+• Én Constructor der tager et navn, et id og en balance som argumenter
+og bruger disse værdier til at sætte værdierne af de tilsvarende attributter.
+5. I klassen Customer tilføjes tre metoder:
+• En metode ved navn deposit med void return type, der tager et argument ved navn amount af typen double. Metoden skal lægge værdien af amount til værdien af attributten balance og gemme denne
+(opdaterede) værdi tilbage i attributten balance.
+• En metode ved navn withdraw med void return type, der tager et
+argument ved navn amount af typen double. Metoden skal trække
+værdien af amount fra attributten balance hvis, og kun hvis, balance
+er større end amount, og gemme den nye værdi i attributten balance.
+• En metode ved navn getBalance, der har double som return type,
+og som returnerer værdien af attributten balance.
+6. I klassen der indeholder main-metoden skal der i denne main-metode oprettes
+en variabel ved navn aCustomer af typen Customer.
+7. aCustomer skal tildeles (en reference til et nyt) Customer objekt. Dette
+gøres ved at lave en tildeling hvis højreside opretter et nyt Customerobjekt ved at kalde constructoren på Customer. Værdien af argumenterne
+bestemmer i selv.
+• Hint: “new” bruges for at kalde en constructor i klasser.
+8. Sæt penge ind på Customer-objektet ved at kalde metoden deposit med
+et beløb I selv bestemmer.
+9. Træk penge ud af Customer-objektet ved at kalde metoden withdraw med
+et beløb I selv bestemmer, men som er mindre end beløbet I satte ind.
+10. Udskriv værdien af balance på Customer-objektet, ved at kalde instansmetoden getBalance og kalde System.out.println med returværdien fra
+dette metodekald som argument.
+11. Verificer af resultatet giver mening.
+14.2 Kunde Database
+Udvid resultatet fra opgave 14.1 med følgende:
+1. Opret en ny klasse ved navn CustomerDatabase.
+2. I klassen CustomerDatabase tilføjes en attribut ved navn customers af
+typen Customer[].
+303. I klassen CustomerDatabase tilføjes én constructor, der ikke tager nogen argumenter men som initialiserer attributten customers med et tomt
+Customer-array, der har 10 pladser.
+4. I klassen CustomerDatabase tilføjes følgende metoder:
+• En metode der tager et Customer-objekt som argument, og gemmer
+det i arrayet customers. Hvad ville være passende navne for denne
+metode, og argumentet til den?
+• En metode der tager en int som argument, og som gennemløber
+customers-arrayet for at kontrollere om id attributten for de enkelte
+elementer er lig med værdien at argument som metoden er blevet
+kaldt med. Hvis det er tilfældet, skal objektet fjernes fra arrayet.
+Ellers skal der ikke gøres noget. Hvad ville være passende navne for
+denne metode, og argumentet til den?
+– Hint: customers-arrayet indeholder referencer til Customer objekter. Værdien null kan bruges til at indikere at en reference
+er ugyldig.
+• En metode der returnerer (alt indholdet af) customers-arrayet. Hvad
+ville være et godt navn for denne?
+• En metode der udskriver navne på alle Customer-objekter i customers.
+Hvad ville være et godt navn for denne?
+5. Find selv på passende ting at implementere i programmets main-metode,
+som tester funktionaliteten af din CustomerDatabase-klasse.
+
+
+
+
+
+14.3 Farver
+De farver vi opfatter er resultatet at vores hjernes fortolkning af signaler fra
+receptorer i vores øjne. Disse receptorer er følsomme overfor lys indenfor en lille
+del af lysets spektrum. På denne måde opfanger nogle af disse receptorer røde
+nuancer, andre grønne nuancer og andre igen blå. Nogle kvinder har faktisk en
+ekstra type receptorer der er følsomme indenfor det fjerne område.
+
+I en computer repræsenteres farver typisk additivt ved hjælp af RGB tripletter;
+altså en rød værdi, en grøn værdi og en blå værdi. Oftest bruges én byte til at
+repræsentere hver af disse. Det giver 2^8 = 256 forskellige nuancer per farvekanal
+og (2^8)^3 = 16777216 farver. Dette er grunden til at man ofte hører referencer
+til “16, 7 millioner farver”, eller bare “millioner af farver”. Disse 3 komponenter
+– rød, grøn og blå – udspænder et farverum. Det kan illustreres som et terning
+i et 3D koordinatsystem hvor hver akse er navngivet efter en grundfarve.
+Men RGB er blot én måde at representere farver på. Andre farvemodeller har
+dog styrker.
+I denne opgave ser vi på HSV; Hue-Saturation-Value. Der er
+igen tale om en triplet. Hue værdien repræsenterer farvens tone, saturation
+(da: saturering) værdien repræsenterer hvor farverig tonen er, og value værdien
+repræsenterer lysheden. HSV illustreres ofte som en cylinder hvor afstanden fra
+centrum er saturation, afstanden fra den ene ende er value og hue er vinklen
+målt langs et tværsnit. Denne model er attraktiv af flere grunde; eksempelvis:
+• En farves kontrastfarve fås ved at lægge 180◦ til hue værdien.
+• Der findes teorier om hvordan man fx finder 3 farver der er “pæne sammen”.
+Dette er eksempelvis tilfældet hvis farverne A og B er har en hue
+værdi der er forskudt k grader i modsat retning i forhold til farven C, og
+ellers er ens.
+• Hvis man ønsker n farver der er lette at skelne fra hinanden kan man
+fordele dem ligeligt på hue cirklen.
+
+I denne opgave skal vi konvertere mellem RGB og HSV ved at lave et program
+efter følgende opskrift:
+
+1. Opret et nyt projekt.
+
+2. Skriv en ny klasse ved navn RGB der repræsenterer en farve formuleret
+efter RGB komponenterne.
+• Klassen skal have 3 int attributter med getter metoder
+(En getter metode for attributten r af typen int er en parameterløs metode der hedder
+ getR med returtypen int der returnerer værdien af attributten r): r, g og b.
+• Klassen skal have en asHSV metode der opretter et HSV objekt der
+repræsenterer samme farve. Algoritmen kan ses i figur 1.
+• Klassen skal have en passende constructor.
+• Klassen skal have en toString metode der returnerer en String
+værdi der repræsenterer instansvariablene.
+
+3. Skriv en ny klasse ved navn HSV der repræsenterer en farve formuleret
+efter HSV komponenterne.
+• Klassen skal have 3 int attributter med getter metoder: h, s og v.
+• Klassen skal have en asRGB metode der opretter et HSV objekt som
+repræsenterer samme farve. Algoritmen kan ses i figur 2.
+• Klassen skal have en passende constructor.
+• Klassen skal have en toString metode der returnerer en String
+værdi der repræsenterer instansvariablene.
+
+4. Opret en ny klasse ved navn Test med en main metode der tester funktionaliteten:
+• Opret et array med nogle hardkodede RGB objekter.
+• Iterer igennem dette array. For hver iteration:
+– Print objektets attributter ud.
+– Konvertér objektet til et objekt af typen HSV. Print dette objekts
+attributter ud.
+– Konvertér det nye objekt tilbage til et nyt objekt af typen RGB.
+Print dette objekts attributter ud.
+
+5. Kør denne main metode og verificér at resultaterne er korrekte. Til dette
+formål kan I fx finde en RGB-HSV converter på nettet.
+• Bemærk: Sammenligning af HSV værdierne er ikke altid trivielt.
+Der er mange standarder for skalering. H skaleres typisk til 360 (da
+det måles i grader) og både S og V skaleres typisk til 100 (da det
+er procenter). Sørg for at konvertere disse værdier til at matche den
+repræsentation som jeres converter bruger. Eksempelvis kan I for hue
+gange med 360 og dividere med 256 hvis i ønsker at ændre skalering
+fra 256 til 360.
+*/

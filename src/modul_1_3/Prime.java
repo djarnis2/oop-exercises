@@ -49,11 +49,15 @@ in the first place.[7]
 
 import java.util.Arrays;
 public class Prime {
-    public static void main(String[] args) {
+    public static void main(String[] args) { // NOTE This method is finding all NOT PRIMES
+        // It is doing this by making a list of all multiples of primes.
+        // since multiples of divisors larger than the sqrt of n are not neccesary they are already there, since they have smaller divisors.
+        // I.E. First not prime 4 is 2*2, second not prime is 6 (2*2*2 or 3*2) etc
         int n = 1_000_000;
-        double sqrtn = java.lang.Math.sqrt(n);
-        boolean[] is_Prime = new boolean[n];
-        Arrays.fill(is_Prime, true);
+        double sqrtn = java.lang.Math.sqrt(n);// we need the sqrt because any divisor greater than this would be detected
+        // by its smaller "partner divisor" i.e n = 81, 3*27, 9*9 , 27*3 (already detected)
+        boolean[] is_Prime = new boolean[n]; // an array with primes
+        Arrays.fill(is_Prime, true); // starts with all true - so we only fill in the not primes
         for (int i = 2; i < sqrtn; i++) {
             if (is_Prime[i]) {
                 for (int j = i * i; j < n; j = j + i) {

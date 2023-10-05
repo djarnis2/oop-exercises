@@ -42,10 +42,10 @@ public class Primtal {
         List<Integer> primes = new ArrayList<Integer>();
         outerloop:
         for (i = 1; i < 1_000_000; i++) {
-            //System.out.println("i = " + i);
+            System.out.println("i = " + i);
             for (j = i ; j > 1; j--) {
-                //System.out.println("j = " + j);
-                //System.out.println("i%j = " + i % j + " when i = " + i + " j = " + j);
+                System.out.println("j = " + j);
+                System.out.println("i%j = " + i % j + " when i = " + i + " j = " + j);
                 if ((i % j == 0) && i != j) {
                     is_prime = false;
                     continue outerloop;
